@@ -1,0 +1,265 @@
+.staff-card-widget .card-img-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1.25rem;
+}
+
+.staff-card-widget .card-img {
+	width: 100%;
+	border-radius: calc(0.25rem - 1px);
+}
+
+.d-block {
+	display: block !important;
+}
+
+.d-none {
+	display: none !important;
+}
+
+.staff-card-widget-generic .btn-a {
+	display: block;
+	width: 100%;
+	text-align: center;
+	transition: all 0.2s linear;
+	cursor: pointer;
+	display: none;
+}
+
+
+/* Staff Section Start */
+
+.staff-card-widget {
+	margin-bottom: 30px;
+}
+
+.staff-card-widget .container {
+	padding: 0;
+}
+
+.staff-card-widget .card {
+	max-width: 360px;
+	margin: auto;
+	margin-bottom: 30px;
+	min-height: 424px;
+}
+
+.staff-card-widget .card .card-head{
+	height: 450px;
+}
+
+.staff-card-widget .card .card-head img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.staff-card-widget .card .card-body {
+	background: #1E4B32;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1.25rem;
+	align-items: flex-start;
+}
+
+.staff-card-widget .card .card-body .text {
+	text-align: center;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.staff-card-widget .card .card-body h4 {
+	margin: 0 0 8px;
+	position: relative;
+}
+
+.staff-card-widget .card .card-body span {
+	display: block;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+
+/* The Overlay (background) */
+
+.staff-card-widget-details {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	background-color: #1E4B32;
+	background-color: rgba(30, 75, 50, 0.83);
+	overflow-x: hidden;
+	transition: all .3s linear;
+}
+
+.staff-card-widget-details .container {
+	position: absolute;
+	right: 0;
+}
+
+.staff-card-widget-details .container .col-12 {
+	padding: 0;
+}
+
+.staff-card-widget-details .data {
+	position: relative;
+}
+
+.staff-card-widget-details .data .outline-btn {
+	font-size: 25px;
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+}
+
+.staff-card-widget-details .card {
+	max-width: 884px;
+	background: #FFF;
+	margin: 60px auto;
+}
+
+.staff-card-widget-details .card .card-body {
+	padding: 40px;
+}
+
+.staff-card-widget-details .card .card-body .logo {
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.staff-card-widget-details .card .card-body .staff-img {
+	border-radius: 50%;
+	margin-bottom: 37px;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+.staff-card-widget-details .card .card-body .staff-img img {
+	width: 100%;
+}
+
+.staff-card-widget-details .card .card-body .buttons {
+	display: flex;
+	justify-content: end;
+}
+
+.staff-card-widget-details .card .card-body .buttons .right,
+.staff-card-widget-details .card .card-body .buttons .left {
+	display: block;
+	cursor: pointer;
+	transition: all .3s linear;
+	margin-left: 20px;
+	font-size: 25px;
+}
+
+.staff-card-widget-details .card .card-body .staff-img .buttons img {
+	width: 37px;
+}
+
+.staff-card-widget-details .card .card-body .staff-name {
+	position: relative;
+}
+
+.staff-card-widget-details .card .card-body .staff-name::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: black;
+	bottom: -10px;
+	left: 0;
+}
+
+.staff-card-widget-details .card .card-body .staff-name h3 {
+	margin-bottom: 30px;
+}
+
+.staff-card-widget-details .card .card-body h4 {
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+
+
+/* Staff Section End */
+
+:root {
+	--surface-color: #fff;
+	--curve: 40;
+}
+
+.staff-card-widget {
+	box-sizing: border-box;
+	font-family: 'Outfit', sans-serif;
+}
+
+.staff-card-widget-generic .cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	padding: 0;
+	list-style-type: none;
+}
+
+.staff-card-widget-generic .card {
+	position: relative;
+	display: block;
+	height: 100%;
+	border-radius: calc(var(--curve) * 1px);
+	overflow: hidden;
+	text-decoration: none;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.staff-card-widget .card__image {
+	width: 100%;
+	height: auto;
+}
+
+.staff-card-widget .card__overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	border-radius: calc(var(--curve) * 1px);
+	background-color: var(--surface-color);
+	transform: translateY(24%);
+	transition: .2s ease-in-out;
+}
+
+.staff-card-widget-generic .card:hover .card__overlay {
+	transform: translateY(0);
+}
+
+.staff-card-widget-generic .card:hover .card__header {
+	transform: translateY(0);
+}
+
+.staff-card-widget-generic .card:hover .btn-a {
+	display: block;
+}
+
+.staff-card-widget-details .card .card-body .bottom-icons {
+	display: flex;
+	justify-content: space-between;
+	font-size: 25px;
+}
+
+.staff-card-widget-details .card .card-body .bottom-icons .social a {
+color: #1E4B32;
+}
+
+.staff-card-widget-details .card .card-body .bottom-icons .social i {
+	margin-right: 20px;
+	cursor: pointer;
+}
